@@ -98,13 +98,14 @@ append_file() {
 append_dir() {
   local dir="$1"
   local depth="$2"
+  local rel="${dir#"$repo_root/"}"
   local name
   local total
   name="$(title_from_name "$(basename "$dir")")"
   total="$(count_markdown "$dir" | tr -d ' ')"
 
   print_indent "$depth"
-  printf -- '- **%s/** (%s md)\n' "$name" "$total"
+  printf -- '- **[%s/](%s/)** (%s md)\n' "$name" "$rel" "$total"
   append_tree "$dir" "$((depth + 1))"
 }
 
