@@ -1,0 +1,36 @@
+# Varsayilan: hicbir dosyayi takip etme.
+*
+
+# Git'in klasorlerin icine bakabilmesi icin klasor gecisine izin ver.
+!*/
+
+# 1. Ana indeks dosyasi takip edilecek.
+!README.md
+
+# 2. Indeks guncelleme scripti takip edilecek.
+!.gitignore
+!update-index.sh
+
+# 3. Kok dizin altinda acilan herhangi bir klasorun icindeki Markdown
+# dosyalari takip edilecek.
+#
+# Ornek:
+# tools/gnome.md                  takip edilir
+# topics/linux-permissions.md     takip edilir
+# my-folder/example.md            takip edilir
+# my-folder/sub/example.md        takip edilir
+!*/**/*.md
+
+# Kok dizinde README.md disindaki Markdown dosyalari takip edilmeyecek.
+# Ornek:
+# notes.md                        takip edilmez
+# draft.md                        takip edilmez
+/*.md
+!/README.md
+
+# Markdown disindaki tum formatlar takip edilmeyecek.
+# Ornek:
+# data.json                       takip edilmez
+# image.png                       takip edilmez
+# export.pdf                      takip edilmez
+# archive.zip                     takip edilmez
