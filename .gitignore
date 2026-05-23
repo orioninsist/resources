@@ -10,7 +10,7 @@
 
 # 2. Indeks guncelleme scripti takip edilecek.
 !.gitignore
-!update-index.sh
+!resources-index.sh
 
 # 3. Kok dizin altinda acilan herhangi bir klasorun icindeki Markdown
 # dosyalari takip edilecek.
