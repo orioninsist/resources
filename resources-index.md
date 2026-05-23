@@ -1,10 +1,9 @@
 # Resources Index
 
-Bu dosya `update-index.sh` ile otomatik uretilir.
+Bu dosya `resources-index.sh` ile otomatik uretilir.
 
 <!-- index:start -->
-- **Tools/**
+- **Tools/** (2 md)
   - [Gnome](tools/gnome.md)
   - [Imagemagick](tools/imagemagick.md)
-- **Topics/**
 <!-- index:end -->

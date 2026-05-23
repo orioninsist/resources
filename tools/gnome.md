@@ -2,10 +2,12 @@
 
 ## Icindekiler
 
-- [Kisa Ozet](#kisa-ozet)
-- [Komutlar](#komutlar)
-- [Ayarlar](#ayarlar)
-- [Kaynaklar](#kaynaklar)
+- [GNOME](#gnome)
+  - [Icindekiler](#icindekiler)
+  - [Kisa Ozet](#kisa-ozet)
+  - [Komutlar](#komutlar)
+  - [Ayarlar](#ayarlar)
+  - [Kaynaklar](#kaynaklar)
 
 ## Kisa Ozet
 
