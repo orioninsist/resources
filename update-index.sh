@@ -2,7 +2,7 @@
 set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readme="$repo_root/README.md"
+index_file="$repo_root/resources-index.md"
 
 start_marker="<!-- index:start -->"
 end_marker="<!-- index:end -->"
@@ -61,21 +61,26 @@ append_tree() {
     find "$base" -mindepth 1 -maxdepth 1 \
       ! -name '.git' \
       ! -name 'README.md' \
+      ! -name 'resources-index.md' \
       \( -type d -o \( -type f -name '*.md' \) \) \
       | sort
   )
 }
 
-new_index="$(
+new_index="$(mktemp)"
+{
   printf '%s\n' "$start_marker"
   append_tree "$repo_root" 0
   printf '%s\n' "$end_marker"
-)"
+} > "$new_index"
 
 tmp="$(mktemp)"
-awk -v start="$start_marker" -v end="$end_marker" -v block="$new_index" '
+awk -v start="$start_marker" -v end="$end_marker" -v block_file="$new_index" '
   $0 == start {
-    print block
+    while ((getline line < block_file) > 0) {
+      print line
+    }
+    close(block_file)
     in_block = 1
     next
   }
@@ -86,13 +91,14 @@ awk -v start="$start_marker" -v end="$end_marker" -v block="$new_index" '
   !in_block {
     print
   }
-' "$readme" > "$tmp"
+' "$index_file" > "$tmp"
 
-if cmp -s "$readme" "$tmp"; then
-  rm "$tmp"
-  printf 'Sonuc: degisiklik yok. README.md indeks zaten guncel.\n'
+if cmp -s "$index_file" "$tmp"; then
+  rm "$tmp" "$new_index"
+  printf 'Sonuc: degisiklik yok. resources-index.md zaten guncel.\n'
   exit 0
 fi
 
-mv "$tmp" "$readme"
-printf 'Sonuc: README.md indeks guncellendi.\n'
+mv "$tmp" "$index_file"
+rm "$new_index"
+printf 'Sonuc: resources-index.md guncellendi.\n'

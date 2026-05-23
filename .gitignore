@@ -4,8 +4,9 @@
 # Git'in klasorlerin icine bakabilmesi icin klasor gecisine izin ver.
 !*/
 
-# 1. Ana indeks dosyasi takip edilecek.
+# 1. Ana proje dosyalari takip edilecek.
 !README.md
+!resources-index.md
 
 # 2. Indeks guncelleme scripti takip edilecek.
 !.gitignore
@@ -21,12 +22,14 @@
 # my-folder/sub/example.md        takip edilir
 !*/**/*.md
 
-# Kok dizinde README.md disindaki Markdown dosyalari takip edilmeyecek.
+# Kok dizinde README.md ve resources-index.md disindaki Markdown dosyalari
+# takip edilmeyecek.
 # Ornek:
 # notes.md                        takip edilmez
 # draft.md                        takip edilmez
 /*.md
 !/README.md
+!/resources-index.md
 
 # Markdown disindaki tum formatlar takip edilmeyecek.
 # Ornek:
