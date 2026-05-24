@@ -3,8 +3,7 @@
 Bu dosya `resources-index.sh` ile otomatik uretilir.
 
 <!-- index:start -->
-- **[Tools/](tools/)** (2 md)
-  - [Gnome](tools/gnome.md)
+- **[Tools/](tools/)** (1 md)
   - [Imagemagick](tools/imagemagick.md)
 - **[Topics/](topics/)** (3 md)
   - **[Gnome/](topics/gnome/)** (3 md)
