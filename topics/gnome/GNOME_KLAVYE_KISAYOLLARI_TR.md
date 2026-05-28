@@ -97,9 +97,9 @@ kısayollarını Türkçe, okunabilir ve tek sayfalık Markdown biçiminde özet
 | `Shift + Super + →` | Geçerli pencereyi sağdaki monitöre taşır. |
 | `Shift + Super + ↑` | Geçerli pencereyi üstteki monitöre taşır. |
 | `Shift + Super + ↓` | Geçerli pencereyi alttaki monitöre taşır. |
-| Devre dışı | Tüm normal pencereleri gizleme. |
-| Devre dışı | Çalışma alanı 2, 3 veya 4'e doğrudan geçiş. |
-| Devre dışı | Pencereyi çalışma alanı 2, 3 veya 4'e doğrudan taşıma. |
+| `Super + D` | Tüm normal pencereleri gizler veya geri gösterir. |
+| `Super + 1` ... `Super + 9` | Çalışma alanı 1-9'a doğrudan geçer. |
+| `Super + Shift + 1` ... `Super + Shift + 9` | Geçerli pencereyi çalışma alanı 1-9'a doğrudan taşır. |
 
 ### GNOME Classic Notu
 
